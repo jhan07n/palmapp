@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button routerDirection="back" routerLink="/access">
+                <ion-icon src="assets/icon/back.svg"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title><img height="40" src="assets/imgs/logo.png"></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list id="lista">
+        <ion-item lines="none">
+            <ion-label text-center>Custom budget</ion-label>
+        </ion-item>
+
+        <!-- <ion-item *ngFor="let field of getField()" lines="none">
+
+            <ion-label position="fixed">{{custom[field]}} </ion-label>
+            <ion-input [(ngModel)]="budget.custom[field]" type="tel" text-right></ion-input>
+
+        </ion-item> -->
+
+
+
+        <ion-item *ngFor="let in of [0,1,2,3,4,5]" lines="none">
+
+            <ion-label position="fixed">Input text </ion-label>
+            <ion-input [(ngModel)]="inputFields[in]" type="tel" text-right></ion-input>
+
+        </ion-item>
+
+    </ion-list>
+
+    <div text-center id="botones">
+        <ion-button color="verdeoscuro" fill="outline" (click)="guardar()">Save</ion-button>
+        <ion-button color="danger" fill="outline" disabled>Clean</ion-button>
+    </div>
+
+
+</ion-content>

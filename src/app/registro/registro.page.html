@@ -1,0 +1,57 @@
+<ion-header>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col text-center>
+              <img height="100" src="assets/imgs/logo.png" alt="PALM">
+              <p>your budget in the palm of your hand</p>
+            </ion-col>
+          </ion-row>
+    <br>
+    </ion-grid>
+
+    <ion-grid text-center>
+  
+        <ion-row>
+          <ion-col size="11" >
+      
+            <ion-label text-left>u s e r n a m e :</ion-label>
+              <ion-item lines="none">
+                  <ion-label> <ion-icon size="small" src="assets/icon/userlog.svg"></ion-icon></ion-label>
+                  <ion-input [(ngModel)]="signin.email" type="email" clearInput autocomplete="on" required></ion-input>
+                </ion-item>
+                <br>
+                <ion-label >p a s s w o r d :</ion-label>
+              <ion-item lines="none">
+                  <ion-label> <ion-icon size="small" src="assets/icon/lock.svg"></ion-icon></ion-label>
+                  <ion-input [(ngModel)]="signin.password" type="password" clearInput required></ion-input>
+                </ion-item>
+               <br>
+               <ion-label text-left>P h o n e :</ion-label>
+               <ion-item lines="none">
+                  <ion-label> <ion-icon size="small" src="assets/icon/tel.svg"></ion-icon></ion-label>
+                  <ion-input [(ngModel)]="signin.tel" type="tel" clearInput autocomplete="on" required></ion-input>
+                </ion-item>
+               
+                
+      
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col ></ion-col>
+          <ion-col>
+            <ion-button type="submit" shape="round" expand="block" class="logbtn" (click)="signup()" color="verdeoscuro" ><div style="color:#ffffff;">S i g n U p</div></ion-button>
+      
+          </ion-col>
+          <ion-col></ion-col>
+      
+        </ion-row>
+      <br><br>
+      
+      </ion-grid>
+
+
+
+</ion-content>

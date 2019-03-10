@@ -1,0 +1,24 @@
+ion-toolbar {
+
+    --background: #ffffff;
+    
+    --ion-color-base: #ffffff !important;
+
+    --border-width: 0px !important;
+    
+    }
+    ion-icon {
+        font-size: 40px;
+        color: #000000;
+      }
+    #login{
+        
+            .button-outline {
+                --border-radius: 15px;
+                --border-width: 4px;
+                --border-style: solid;
+                --color:#000000 !important;
+            }
+        }
+        
+    

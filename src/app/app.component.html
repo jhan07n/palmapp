@@ -1,0 +1,27 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header padding>
+        <ion-toolbar>
+          <ion-label style="font-size: 5.5rem; font-weight: bold;color:#c2ed3d">MENU</ion-label >
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list id="menulist">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item id="menuitem" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [src]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+      <ion-footer text-center>
+        <ion-button color="verdeclaro" fill="clear" (click)="logout()">Log Out</ion-button>
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

@@ -1,0 +1,91 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+ion-toolbar {
+
+    --background: #ffffff;
+    
+    --ion-color-base: #ffffff !important;
+
+    --border-width: 0px !important;
+    
+    }
+
+#menuitem{
+    
+   
+    border-top: 3px solid #c2ed3d;
+    font-size: 1.5rem;
+}
+#menulist{
+    border-bottom: 3px solid #c2ed3d;
+}
+.Absolute-Center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100%;
+    
+   /* width: 100%;
+   height: 100%;
+   //overflow: auto;
+   margin: auto;
+   position: absolute;
+   top: 0; left: 0; bottom: 0; right: 0; */
+} 
+.ion-color-verdeclaro {
+
+    --ion-color-base: var(--ion-color-verdeclaro) !important;
+    
+    --ion-color-base-rgb: var(--ion-color-verdeclaro-rgb) !important;
+    
+    --ion-color-contrast: var(--ion-color-verdeclaro-contrast) !important;
+    
+    --ion-color-contrast-rgb: var(--ion-color-verdeclaro-contrast-rgb) !important;
+    
+    --ion-color-shade: var(--ion-color-verdeclaro-shade) !important;
+    
+    --ion-color-tint: var(--ion-color-verdeclaro-tint) !important;
+    
+    }
+    .ion-color-verdeoscuro {
+
+        --ion-color-base: var(--ion-color-verdeoscuro) !important;
+        
+        --ion-color-base-rgb: var(--ion-color-verdeoscuro-rgb) !important;
+        
+        --ion-color-contrast: var(--ion-color-verdeoscuro-contrast) !important;
+        
+        --ion-color-contrast-rgb: var(--ion-color-verdeoscuro-contrast-rgb) !important;
+        
+        --ion-color-shade: var(--ion-color-verdeoscuro-shade) !important;
+        
+        --ion-color-tint: var(--ion-color-verdeoscuro-tint) !important;
+        
+        }
+        ion-input{
+            font-size: 0.9rem !important;
+        }
+
+        #addpro{
+            height: 1.5rem;
+            width: 1.5rem;
+            padding: 0.2rem;
+            background-color: #b9e23a
+          }
+          #iconadd{
+            margin-left: -0.1rem;
+            margin-top: -0.2rem
+          }
+          #ionfab{
+            padding-left: 0.3rem;
+          }

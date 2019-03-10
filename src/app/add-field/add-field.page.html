@@ -1,0 +1,29 @@
+<ion-header>
+
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-button (click)="cerrar()" color="dark" size="large" icon-only>
+                <ion-icon size="large" name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-title>{{selectName}}</ion-title>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card>
+
+        <ion-select [(ngModel)]="selectedProperty" (ionChange)="change($event)">
+            <ion-select-option *ngFor="let item of getFields()" value="{{item}}">{{propiedades[item]}}</ion-select-option>
+        </ion-select>
+
+    </ion-card>
+
+    <ion-item lines="none" text-center>
+
+    </ion-item>
+
+
+
+</ion-content>

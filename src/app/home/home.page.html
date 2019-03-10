@@ -1,0 +1,80 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button>
+                <ion-icon  src="assets/icon/menu.svg"></ion-icon>
+            </ion-menu-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+              <ion-button>
+                  <ion-icon  src="assets/icon/settings.svg" size="large"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+  
+          <ion-title><img height="40" src="assets/imgs/logo.png"></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content scrollY="false">
+
+  <div style="width: 100%; padding-top: 1rem;" text-center>
+    <ion-label>Current Cash Available</ion-label>
+  <ion-row ><ion-col size="2"></ion-col><ion-col text-center><div id="currentmony" >{{ cashActSum - (haveActSum + wantsActSum) | currency}}</div></ion-col ><ion-col size="2"></ion-col></ion-row>
+  
+   <ion-card text-left>
+    <ion-card-header>
+      <ion-card-title>
+        <ion-row>
+            <ion-col size="8">current month summary</ion-col>
+            <ion-col size="4" text-right>{{nombre}}</ion-col>
+        </ion-row>  
+        
+          <ion-row text-center id="headercard-text">
+              <ion-col size="5"></ion-col>
+              <ion-col >Budget</ion-col>
+              <ion-col >Actual</ion-col>
+              <ion-col >Difference</ion-col>
+          </ion-row>
+      </ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-row text-center>
+            <ion-col size="5" text-left>Total Cash Available</ion-col>
+            <ion-col >{{ cashSum | currency}}</ion-col>
+            <ion-col >{{ cashActSum | currency}}</ion-col>
+            <ion-col >{{ cashActSum - cashSum  | currency}}</ion-col>
+        </ion-row>
+    <ion-row text-center>
+            <ion-col size="5" text-left>have/needs/wants</ion-col>
+            <ion-col >{{ haveSum + wantsSum | currency}}</ion-col>
+            <ion-col >{{ haveActSum + wantsActSum | currency}}</ion-col>
+            <ion-col >{{ (haveSum + wantsSum) - (haveActSum + wantsActSum) | currency}}</ion-col>
+        </ion-row>
+    <ion-row text-center>
+            <ion-col size="5" text-left>Total Cash Balance</ion-col>
+            <ion-col class="total">{{ cashSum - (haveSum + wantsSum) | currency}}</ion-col>
+            <ion-col class="total" >{{ cashActSum -(haveActSum + wantsActSum) | currency}}</ion-col>
+            <ion-col class="total">{{ -(cashActSum -(haveActSum + wantsActSum))+(cashSum - (haveSum + wantsSum)) | currency}} </ion-col>
+        </ion-row>
+    </ion-card-content>
+  </ion-card>
+  </div>
+</ion-content>
+<ion-footer text-center>
+    <ion-row style="padding-bottom: 1.5rem;padding-top: 0.5rem">
+        <ion-col><ion-button color="dark" fill="clear" expand="full" (click)="cashinmd()">Cash In</ion-button></ion-col>
+    </ion-row>
+    <ion-row style="padding-bottom: 1.5rem;padding-top: 0.5rem">
+            <ion-col><ion-button color="dark" fill="clear" expand="full" (click)="havemd()">Have/Need</ion-button></ion-col>
+        </ion-row>
+        <ion-row style="padding-bottom: 1.5rem;">
+                <ion-col><ion-button color="dark" fill="clear" expand="full" >Debts </ion-button></ion-col>
+            </ion-row>
+    <ion-row>
+            <ion-col> 
+                    <ion-button color="dark" fill="clear" expand="full" (click)="wantmd()">Wants
+                      </ion-button>
+            </ion-col>
+        </ion-row>
+</ion-footer>

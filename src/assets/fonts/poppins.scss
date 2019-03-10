@@ -1,0 +1,23 @@
+/* poppins-regular - latin */
+
+$poppins-font-path: $font-path !default;
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+       url("#{$poppins-font-path}/poppins-v5-latin-regular.woff2") format('woff2'), /* Super Modern Browsers */
+       url("#{$poppins-font-path}/poppins-v5-latin-regular.woff") format('woff'), /* Modern Browsers */
+       url("#{$poppins-font-path}/poppins-v5-latin-regular.ttf") format('truetype'); /* Safari, Android, iOS */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Poppins Bold'), local('Poppins-Bold'),
+       url("#{$poppins-font-path}/poppins-v5-latin-700.woff2") format('woff2'), /* Super Modern Browsers */
+       url("#{$poppins-font-path}/poppins-v5-latin-700.woff") format('woff'), /* Modern Browsers */
+       url("#{$poppins-font-path}/poppins-v5-latin-700.ttf") format('truetype'); /* Safari, Android, iOS */
+}

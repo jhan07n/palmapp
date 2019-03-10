@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{budgetName}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>CASH AVAILABLE</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-list id="lista">
+                <ion-item>
+                    <ion-label position="floating">CASH AVAILABLE</ion-label>
+                </ion-item>
+
+                <ion-item *ngFor="let field of getFieldsCashAvailable()">
+
+                    <ion-label position="floating">{{cashAvailable[field]}} </ion-label>
+                    <ion-input [(ngModel)]="budget.cashAvailable[field]" type="number"></ion-input>
+
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">HAVE/NEEDS TO PAY</ion-label>
+                </ion-item>
+
+                <ion-item *ngFor="let field of getFieldsHaveToPay()">
+
+                    <ion-label position="floating">{{haveToPay[field]}} </ion-label>
+                    <ion-input [(ngModel)]="budget.haveToPay[field]" type="number"></ion-input>
+
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label position="floating">WANTS</ion-label>
+                </ion-item>
+
+                <ion-item *ngFor="let field of getFieldsWants()">
+
+                    <ion-label position="floating">{{wants[field]}} </ion-label>
+                    <ion-input [(ngModel)]="budget.wants[field]" type="number"></ion-input>
+
+                </ion-item>
+
+            </ion-list>
+
+            <ion-item>
+                <ion-col>
+                    <ion-button color="secondary" (click)="Mostrar()">Mostrar</ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button color="secondary" (click)="guardar()">Guardar</ion-button>
+                </ion-col>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

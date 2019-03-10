@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button routerDirection="back" routerLink="/access">
+                <ion-icon src="assets/icon/back.svg"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title><img height="40" src="assets/imgs/logo.png"></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item lines="none">
+            <ion-label text-center>W A N T S</ion-label>
+            <ion-fab id="ionfab" top right color="verdeoscuro">
+                    <button id="addpro" ion-fab mini ><ion-icon id="iconadd" color="light" name="add"></ion-icon>
+                        <ion-select [(ngModel)]="selectedField" (ionChange)="change($event)">
+                            <ion-select-option  *ngFor="let item of getFieldsWants()" value="{{item}}">{{wants[item]}}</ion-select-option>
+                        </ion-select>
+                        </button>
+            </ion-fab>
+        </ion-item>
+
+        <ion-item *ngFor="let field of fields" lines="none">
+
+            <ion-label position="fixed">{{wants[field]}} </ion-label>
+            <ion-input [(ngModel)]="budget.wants[field]" type="tel" text-right></ion-input>
+
+        </ion-item>
+    </ion-list>
+    <div text-center id="botones">
+        <ion-button color="verdeoscuro" fill="outline" (click)="guardar()">Save</ion-button>
+        <ion-button color="danger" fill="outline" disabled>Clean</ion-button>
+    </div>
+
+</ion-content>
